@@ -1,0 +1,24 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>{{title}} | Acetate</title>
+
+    {% if description %}
+      <meta name="description" content="{{description}}">
+    {% endif %}
+
+    {% if author %}
+      <meta name="description" content="{{author}}">
+    {% endif %}
+  </head>
+
+  <body>
+    {% block content %}{% endblock %}
+
+    <!-- last modified: {{ stats.mtime }} -->
+    <!-- path relative to root: {{ relativePath }} -->
+  </body>
+</html>
