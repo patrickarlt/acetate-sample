@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "acetate": "0.0.5x",
+    "acetate": "0.0.8",
     "chalk": "^0.5.1"
   }
 }
