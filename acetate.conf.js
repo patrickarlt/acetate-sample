@@ -18,5 +18,10 @@ module.exports = function (acetate) {
 
   // all pages matching **/* will extend the 'content' block inside _layout.html
   acetate.layout('**/*', '_layout:content');
+  acetate.layout('blog/posts/**/*', 'blog/_layout:post');
 
+  acetate.collection('posts', 'blog/posts/*.md', {
+    sortBy: 'date',
+    ascending: false
+  });
 };
