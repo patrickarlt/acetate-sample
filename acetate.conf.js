@@ -25,4 +25,11 @@ module.exports = function (acetate) {
     ascending: false
   });
 
+  acetate.registerHelper('helper', function(context, foo, bar, baz){
+    return 'Custom helper called with ' + foo + ' ' + bar + ' '  + baz;
+  });
+
+  acetate.registerBlock('content', function(context, body, foo, bar, baz){
+    return 'Block helper called with ' + foo + ' ' + bar + ' '  + baz + ' \n' + body;
+  });
 };
