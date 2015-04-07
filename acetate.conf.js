@@ -25,10 +25,13 @@ module.exports = function (acetate) {
     ascending: false
   });
 
+  // `context` is an object of all the local variables in the template
   acetate.registerHelper('helper', function(context, foo, bar, baz){
     return 'Custom helper called with ' + foo + ' ' + bar + ' '  + baz;
   });
-
+  
+  // `context` is an object of all the local variables in the template
+  // `body` is the content that was passed in the block
   acetate.registerBlock('content', function(context, body, foo, bar, baz){
     return 'Block helper called with ' + foo + ' ' + bar + ' '  + baz + ' \n' + body;
   });
