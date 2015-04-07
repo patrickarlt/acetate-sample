@@ -24,4 +24,5 @@ module.exports = function (acetate) {
     sortBy: 'date',
     ascending: false
   });
+
 };
