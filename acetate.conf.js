@@ -1,3 +1,6 @@
+var _ = require('lodash');
+var minimatch = require('minimatch');
+
 module.exports = function (acetate) {
 
   // set the log level we want
@@ -20,16 +23,22 @@ module.exports = function (acetate) {
   acetate.layout('**/*', '_layout:content');
   acetate.layout('blog/posts/**/*', 'blog/_layout:post');
 
-  acetate.collection('posts', 'blog/posts/*.md', {
+  acetate.collection('posts', 'blog/posts/*', {
     sortBy: 'date',
     ascending: false
   });
 
-  acetate.registerHelper('helper', function(context, foo, bar, baz){
+  acetate.registerHelper('helper', function(foo, bar, baz){
     return 'Custom helper called with ' + foo + ' ' + bar + ' '  + baz;
   });
 
-  acetate.registerBlock('content', function(context, body, foo, bar, baz){
+  acetate.registerBlock('content', function(body, foo, bar, baz){
     return 'Block helper called with ' + foo + ' ' + bar + ' '  + baz + ' \n' + body;
+  });
+
+  acetate.query('blog', function(pages){
+    return _(pages).filter(function(page){
+      return minimatch(page.src, 'blog/posts/**/*');
+    }).sortByOrder(['date'], [false]);
   });
 };

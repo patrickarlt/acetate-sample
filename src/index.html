@@ -6,4 +6,10 @@ description: 'Congratulations you have successfuly setup Acetate!'
 
 {% block content %}
   <h1>Welcome to Acetate!</h1>
+
+  <ul>
+  {% for post in queries.blog %}
+    <li><a href="{{post.relativeUrl}}{{post.url}}">{{post.title}}</a></li>
+  {% endfor %}
+  </ul>
 {% endblock %}

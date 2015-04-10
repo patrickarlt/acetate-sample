@@ -5,12 +5,11 @@
 
   {% block post %}{% endblock %}
 
-  {% if posts.previous %}
-    <a href="{{ posts.previous.url }}">{{ posts.previous.title }}</a>
-  {% endif%}
+{% if posts.previous %}
+  <a href="{{relativeUrl}}{{ posts.previous.url }}">{{ posts.previous.title }}</a>
+{% endif%}
 
-
-  {% if posts.next %}
-    <a href="{{ posts.next.url }}">{{ posts.next.title }}</a>
-  {% endif%}
+{% if posts.next %}
+  <a href="{{relativeUrl}}{{ posts.next.url }}">{{ posts.next.title }}</a>
+{% endif%}
 {% endblock %}
