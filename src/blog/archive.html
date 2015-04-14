@@ -1,11 +1,9 @@
 ---
 title: Blog Archive
-collections:
-  posts: posts
 ---
 
 <ul>
-{% for post in posts.all %}
+{% for post in queries.blog %}
   <li><a href="{{post.url}}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>

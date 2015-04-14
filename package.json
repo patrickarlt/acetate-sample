@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "acetate": "0.0.24",
+    "acetate": "0.0.27",
     "lodash": "^3.6.0",
     "minimatch": "^2.0.4",
     "request": "*"

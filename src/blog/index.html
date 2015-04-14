@@ -1,13 +1,11 @@
 ---
 title: Blog Archive
-collections:
-  posts: posts
 ---
 
 <h3>All Posts</h3>
 
 <ul>
-{% for post in posts.all.slice(0,2) %}
+{% for post in queries.blog.slice(0,2) %}
   <li><a href="{{post.relativeUrl}}{{post.url}}">{{post.title}}</a></li>
 {% endfor %}
 </ul>
