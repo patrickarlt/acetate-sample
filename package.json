@@ -1,17 +1,30 @@
 {
   "name": "acetate-sample",
-  "version": "1.0.0",
   "description": "Sample project for Acetate.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "1.0.0",
+  "author": "Patrick Arlt <patrick.arlt@gmail.com> (https://patrickarlt.com/)",
+  "bugs": {
+    "url": "https://github.com/patrickarlt/acetate-sample/issues/"
   },
-  "author": "",
-  "license": "MIT",
   "dependencies": {
-    "acetate": "0.0.27",
-    "lodash": "^3.6.0",
-    "minimatch": "^2.0.4",
-    "request": "*"
+    "acetate": "1.0.0",
+    "acetate-cli": "1.0.0"
+  },
+  "keywords": [
+    "acetate",
+    "sample"
+  ],
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "homepage": "https://github.com/patrickarlt/acetate-sample",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:patrickarlt/acetate-sample.git"
+  },
+  "scripts": {
+    "start": "acetate serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

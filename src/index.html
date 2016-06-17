@@ -1,9 +1,8 @@
 ---
-description: 'Congratulations you have successfuly setup Acetate!'
+title: Hello World
+description: Congratulations you have successfuly setup Acetate!
 ---
 
-<ul>
-{% for post in queries.blog %}
-  <li><a href="{{post.url}}">{{ post.title }}</a></li>
-{% endfor %}
-</ul>
+<h1>{{title}}</h1>
+
+<p>{{description}}</p>
