@@ -7,8 +7,8 @@
     "url": "https://github.com/patrickarlt/acetate-sample/issues/"
   },
   "dependencies": {
-    "acetate": "1.0.0",
-    "acetate-cli": "1.0.0"
+    "acetate": "1.1.1",
+    "acetate-cli": "1.0.1"
   },
   "keywords": [
     "acetate",
